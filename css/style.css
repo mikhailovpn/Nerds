@@ -3,6 +3,10 @@ body {
 }
 
  div {
-   background-color: 
+   background-color:
 
  }
+
+ul {
+  list-style: none;
+}
