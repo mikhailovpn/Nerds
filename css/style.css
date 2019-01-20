@@ -1,12 +1,162 @@
 body {
   font-family: 'Roboto', sans-serif;
+  width: 1440px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
 }
-
- div {
-   background-color:
-
- }
 
 ul {
   list-style: none;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  display: block;
+  color: #ffffff;
+  background-color: #fb565a;
+  border: none;
+  margin-top: 39px;
+  padding: 16px 55px;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.navigation-panel {
+  display: flex;
+  justify-content: flex-start;
+  /* width: 1200px; */
+  padding: 50px 140px 0 140px;
+  background-color: #eeeeee;
+}
+
+.header-logo {
+  margin-right: 140px;
+}
+
+.site-navigation {
+  display: flex;
+  justify-content: flex-start;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.site-navigation,
+.cart {
+
+  text-transform: uppercase;
+}
+
+.site-navigation a,
+.cart a {
+  display: inline-block;
+  padding: 30px 24px 14px 22px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  /* background-color: red; */
+}
+
+.cart::before {
+  content: "";
+  position: absolute;
+
+  background-color: #FFBA10;
+  background-image: url("img/cart-icon.svg");
+}
+
+.cart a {
+    margin-left: 160px;
+}
+
+main {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.row-1 {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 140px;
+  background-color: #eeeeee;
+}
+
+.row-1-left {
+  width: 395px;
+}
+
+.row-1 h1 {
+  margin-top: 76px;
+  margin-bottom: 23px;
+  font-size: 54px;
+  line-height: 56px;
+}
+
+.row-2 {
+  display: flex;
+  justify-content: flex-start;
+  margin: 80px 140px;
+  padding: 0;
+}
+
+.column {
+  width: 250px;
+  margin-right: 150px;
+}
+
+.column h2 {
+  text-transform: uppercase;
+}
+
+.column button {
+  padding: 16px 40px;
+  margin-top: 32px;
+}
+
+.button-green {
+  background-color: #00ca74;
+}
+
+.button-yellow {
+  background-color: #efc84a;
+}
+
+.row-3 {
+  display: flex;
+  justify-content: flex-start;
+  margin: 80px 140px;
+  padding: 0;
+}
+
+.row-3::before {
+  content: "";
+
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  width: 1440px;
+  height: 2px;
+  background-color: blue;
+
+}
+
+.row-3-left {
+  width: 660px;
+  margin-right: 140px;
+}
+
+.row-3 h2 {
+  font-size: 45px;
+  line-height: 45px;
+  margin-top: 0;
+}
+
+.row-3 h3 {
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
 }
