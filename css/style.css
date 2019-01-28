@@ -45,7 +45,7 @@ button {
 
 .site-navigation,
 .cart {
-
+  position: relative;
   text-transform: uppercase;
 }
 
@@ -63,13 +63,16 @@ button {
 .cart::before {
   content: "";
   position: absolute;
-
-  background-color: #FFBA10;
-  background-image: url("img/cart-icon.svg");
+  top: 34px;
+  left: 223px;
+  height: 30px;
+  width: 30px;
+  
+  background: url("../img/cart-icon.svg") no-repeat;
 }
 
 .cart a {
-    margin-left: 160px;
+    margin-left: 200px;
 }
 
 main {
@@ -99,8 +102,9 @@ main {
 .row-2 {
   display: flex;
   justify-content: flex-start;
-  margin: 80px 140px;
-  padding: 0;
+  margin: 0 140px;
+  padding: 80px 0;
+  border-bottom: 2px solid grey;
 }
 
 .column {
@@ -132,21 +136,25 @@ main {
   padding: 0;
 }
 
-.row-3::before {
-  content: "";
-
-  /* position: absolute;
-  top: 0;
-  left: 0; */
-  width: 1440px;
-  height: 2px;
-  background-color: blue;
-
-}
 
 .row-3-left {
   width: 660px;
   margin-right: 140px;
+}
+
+.row-3-left li {
+  position: relative;
+}
+
+.row-3-left li::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 10px;
+  
+  width: 25px;
+  height: 2px;
+  background: red;
 }
 
 .row-3 h2 {
