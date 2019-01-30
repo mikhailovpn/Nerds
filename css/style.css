@@ -104,7 +104,7 @@ main {
   justify-content: flex-start;
   margin: 0 140px;
   padding: 80px 0;
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid lightgrey;
 }
 
 .column {
@@ -132,8 +132,10 @@ main {
 .row-3 {
   display: flex;
   justify-content: flex-start;
-  margin: 80px 140px;
+  margin: 80px 140px 0 140px;;
   padding: 0;
+	padding-bottom: 50px;
+	border-bottom: 2px solid lightgrey;
 }
 
 
@@ -144,13 +146,14 @@ main {
 
 .row-3-left li {
   position: relative;
+  line-height: 44px;
 }
 
 .row-3-left li::before {
   content: "";
   position: absolute;
-  left: -35px;
-  top: 10px;
+  left: -40px;
+  top: 20px;
   
   width: 25px;
   height: 2px;
@@ -167,4 +170,89 @@ main {
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
+}
+
+.row-3-right {
+	width: 420px;
+}
+
+.row-3-right ul {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	margin: 0;
+	padding: 0;
+}
+
+.row-3-right ul li {
+	width: 100px;
+	padding: 0;
+	margin: 0 15px;;
+}
+
+.big-percent {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.row-logo {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 140px;
+  padding: 0;
+	border-bottom: 2px solid lightgrey;
+}
+
+.row-logo img {
+	opacity: 0.2;
+}
+
+.vertical-line {
+	margin: auto 0;
+	padding: 0;
+	width: 2px;
+	height: 50px;
+	background-color: lightgrey;
+}
+
+footer {
+	margin: 80px 0 0 0;
+  padding: 0;
+}
+.map {
+	position: relative;
+	height: 400px;
+	margin: 0;
+	padding: 0;
+	background-image: url("../img/map.png");
+	background-position: center center;
+}
+
+.feedback-form {
+	position: absolute;
+	left: 140px;
+	top: 52px;
+	width: 250px;
+	height: 250px;
+	margin: 0;
+	padding: 35px;
+	background-color: #ffffff;
+}
+
+.map-pointer {
+	position: absolute;
+	top: 100px;
+	left: 600px;
+}
+
+.social {
+	margin: 0 140px;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	background-color: grey;
+}
+
+.social div {
+	margin: auto;
 }
