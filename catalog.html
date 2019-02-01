@@ -10,19 +10,87 @@
   <body>
     <header>
       <nav>
-        <img src="https://pencode.ru/psd/nerds/nerds/svg/nerds-logo.svg" alt="Логотип студии Nerds">
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-
+        <div class="navigation-panel">
+          <img class="header-logo" src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии Nerds">
+          <ul class="site-navigation">
+            <li><a href="">Студия</a></li>
+            <li><a href="">Клиенты</a></li>
+            <li><a href="">Магазин</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+          <ul class="cart">
+            <li><a href="">Корзина</a></li>
+          </ul>
+        </div>
+				<div class="head-title">
+					<h1>Магазин готовых шаблонов</h1>
+				</div>
       </nav>
     </header>
 
-    <main>
-
+    <main class="main-catalog">
+		<div class="filters">
+			<form class="filter" method="get" action="https://echo.htmlacademy.ru">
+				<fieldset>
+					<legend>СТОИМОСТЬ</legend>
+					<input type="range" min="1" max="10">
+					<output name="sum"></output>
+				</fieldset>
+				<fieldset>
+					<legend>СЕТКА</legend>
+					<ul>
+						<li>
+							<input type="radio" name="cell-group" value="adaptive" id="filter-adaptive">
+							<label for="filter-adaptive">Адаптивная</label>
+						</li>
+						<li>
+							<input type="radio" name="cell-group" value="fixed" id="filter-fixed">
+							<label for="filter-adaptive">Фиксированная</label>
+						<li>
+							<input type="radio" name="cell-group" value="elastic" id="filter-elastic">
+							<label for="filter-elastic">Резиновая</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>ОСОБЕННОСТИ:</legend>
+					<ul>
+						<li>
+							<input type="checkbox" name="special-group" value="slider" id="filter-slider">
+							<label for="filter-slider">Слайдер</label>
+						</li>
+						<li>
+							<input type="checkbox" name="special-group" value="advantages" id="filter-advantages">
+							<label for="filter-advantages">Блок преимуществ</label>
+						</li>
+						<li>
+							<input type="checkbox" name="special-group" value="news" id="filter-news">
+							<label for="filter-news">Новости</label>
+						</li>
+						<li>
+							<input type="checkbox" name="special-group" value="gallery" id="filter-gallery">
+							<label for="filter-gallery">Галерея</label>
+						</li>
+						<li>
+							<input type="checkbox" name="special-cart" value="slider" id="filter-cart">
+							<label for="filter-cart">Корзина</label>
+						</li>
+					</ul>
+				</fieldset>
+				<button type="submit" class="filter-button button">Показать</button>
+			</form>
+		</div>
+		<div class="examples">
+			<p>ТЕСТ</p>
+			<div class ="examples-form">
+				
+			</div>
+			<div class="examples-images">
+				<div>
+					<img src="" width="300" height="600" alt="Вебсайт Sedona">
+				</div>
+			</div>
+		</div>
     </main>
 
     <footer>
