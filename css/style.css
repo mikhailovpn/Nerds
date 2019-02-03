@@ -8,6 +8,10 @@ body {
   font-weight: 400;
 }
 
+a {
+  text-decoration: none;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -279,16 +283,31 @@ footer {
 .social-container {
 	display: flex;
 	justify-content: space-between;
-	width: 150px;
-	background-color: grey;
+	width: 350px;
 }
 
+.social-button {
+  position: relative;
+  background-color: #e1e1e1;
+  width: 78px;
+  height: 78px;
+  margin: auto;
+  border-radius: 50%
+}
+
+.social-button a {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
 
 .social h2 {
 	font-size: 34px;
 	margin: 0;
 	margin-top: 50px;
 }
+
+
 
 
 /*Оформление каталога*/
@@ -326,10 +345,14 @@ h1 {
 }
 
 .filter-item {
-  margin: 0 0 40px 0;;
+  margin: 0 0 51px 0;;
   padding: 0;
 
   border: none;
+}
+
+.filter-item ul {
+  padding: 0;
 }
 
 .range-filter {
@@ -420,6 +443,62 @@ h1 {
   text-align: right;
 }
 
+.filter-option {
+  margin: 16px 0 0 0;
+  padding-left: 35px;
+}
+
+.filter-option label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.filter-input {
+  display: none;
+}
+
+.filter-input-radio:hover + label {
+  opacity: 1.0;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+
+  top: 0;
+  left: -35px;
+  background: url("../img/radio-off.svg") no-repeat center;
+  opacity: 0.5;
+}
+
+.filter-input-radio:checked + label::before {
+  background: url("../img/radio-on.svg") no-repeat center;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 26px;
+
+  top: 0;
+  left: -39px;
+  background: url("../img/checkbox-off.svg") no-repeat center;
+  opacity: 0.5;
+}
+
+.filter-input-checkbox:checked + label::before {
+  background: url("../img/checkbox-on.svg") no-repeat center;
+  left: -37px;
+}
+
 .examples {
   margin-left: 140px;
 }
@@ -433,5 +512,57 @@ h1 {
 }
 
 .example-image {
-  margin-bottom: 23px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 34px;
+}
+
+.example-image-header {
+  opacity: 0.1;
+}
+
+.example-image:hover {
+  opacity: 1;
+}
+
+.pagination-list {
+  display: flex;
+  padding: 0;
+  margin: 27px 0 0 0;
+  list-style: none;
+}
+
+.pagination-item  {
+  margin-right: 11px;
+
+  background-color: #eeeeee;
+  border-radius: 3px;
+}
+
+.pagination-item a {
+  box-sizing: border-box;
+  display: block;
+  width: 50px;
+  height: 50px;
+  color: #000000;
+  padding: 14px 20px;
+}
+
+.pagination-item-next a {
+  width: 260px;
+  margin: auto;
+  text-align: center;
+}
+
+.pagination-item-current {
+  background-color: #ffffff;
+
+}
+
+.pagination-item-current a {
+  border: 4px solid #dbdbdb;
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  border-radius: 3px;
 }
