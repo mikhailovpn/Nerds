@@ -15,7 +15,7 @@
           <ul class="site-navigation">
             <li><a href="">Студия</a></li>
             <li><a href="">Клиенты</a></li>
-            <li><a href="">Магазин</a></li>
+            <li><a class="navigation-current">Магазин</a></li>
             <li><a href="">Контакты</a></li>
           </ul>
           <ul class="cart">
@@ -31,12 +31,23 @@
     <main class="main-catalog">
 		<div class="filters">
 			<form class="filter" method="get" action="https://echo.htmlacademy.ru">
-				<fieldset>
-					<legend>СТОИМОСТЬ</legend>
-					<input type="range" min="1" max="10">
-					<output name="sum"></output>
+				<fieldset class="filter-item">
+					<legend>СТОИМОСТЬ: </legend>
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+            </div>
+            <div class="price-controls">
+              <label for="min-price">ОТ <input name="min-price" type="text" value="0"></label>
+              <label for="max-price" class="max-price" >ДО <input name="max-price" type="text" value="15 000"></label>
+            </div>
+          </div>
 				</fieldset>
-				<fieldset>
+				<fieldset class="filter-item">
 					<legend>СЕТКА</legend>
 					<ul>
 						<li>
@@ -45,14 +56,14 @@
 						</li>
 						<li>
 							<input type="radio" name="cell-group" value="fixed" id="filter-fixed">
-							<label for="filter-adaptive">Фиксированная</label>
+							<label for="filter-fixed">Фиксированная</label>
 						<li>
 							<input type="radio" name="cell-group" value="elastic" id="filter-elastic">
 							<label for="filter-elastic">Резиновая</label>
 						</li>
 					</ul>
 				</fieldset>
-				<fieldset>
+				<fieldset class="filter-item">
 					<legend>ОСОБЕННОСТИ:</legend>
 					<ul>
 						<li>
@@ -81,20 +92,58 @@
 			</form>
 		</div>
 		<div class="examples">
-			<p>ТЕСТ</p>
+
 			<div class ="examples-form">
-				
+        <form class="filter-item" method="get" action="https://echo.htmlacademy.ru">
+          <legend>СОРТИРОВАТЬ: </legend>
+        </form>
 			</div>
 			<div class="examples-images">
-				<div>
-					<img src="" width="300" height="600" alt="Вебсайт Sedona">
+				<div class="example-image">
+					<img src="img/img-sedona.jpg" width="360" height="660" alt="Вебсайт Sedona">
+				</div>
+        <div class="example-image">
+					<img src="img/img-pink.jpg" width="360" height="660" alt="Вебсайт Sedona">
+				</div>
+        <div class="example-image">
+					<img src="img/img-barbershop.jpg" width="360" height="660" alt="Вебсайт Sedona">
+				</div>
+        <div class="example-image">
+					<img src="img/img-mishka.jpg" width="360" height="660" alt="Вебсайт Sedona">
+				</div>
+        <div class="example-image">
+					<img src="img/img-aplus.jpg" width="360" height="660" alt="Вебсайт Sedona">
+				</div>
+        <div class="example-image">
+					<img src="img/img-kvast.jpg" width="360" height="660" alt="Вебсайт Sedona">
 				</div>
 			</div>
 		</div>
     </main>
 
     <footer>
+      <section class="map">
+        <div class="feedback-form">
+          <h3>NЁRDS DESIGN STUDIO</h3>
+          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <p>тел. +7(812)2757575</p>
+          <button type="button">Напишите нам</button>
+        </div>
+        <div class="map-pointer">
+          <img src="img/map-marker.png">
+        </div>
+      </section>
 
+      <section class="social">
+				<div class="social-container">
+					<div><img src="img/vk-icon.svg"></div>
+					<div><img src="img/fb-icon.svg"></div>
+					<div><img src="img/insta-icon.svg"></div>
+					</div>
+        <div>
+          <h2>Давайте дружить, это выгодно!</h2>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+      </section>
     </footer>
   </body>
 </html>
