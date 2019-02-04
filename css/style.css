@@ -283,26 +283,33 @@ footer {
 .social-container {
 	display: flex;
 	justify-content: space-between;
-	width: 350px;
+	width: 250px;
 }
 
 .social-button {
-  position: relative;
-  background-color: #e1e1e1;
-  width: 78px;
-  height: 78px;
-  margin: auto;
-  border-radius: 50%
 }
 
 .social-button a {
+	position: relative;
+	display: block;
+	width: 78px;
+  height: 78px;
+	border-radius: 50%;
+	background-color: #e1e1e1;
+}
+
+.social-button img {
+	margin: 0;
   position: absolute;
-  width: 100%;
-  text-align: center;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .social h2 {
 	font-size: 34px;
+	
 	margin: 0;
 	margin-top: 50px;
 }
@@ -462,7 +469,7 @@ h1 {
   display: none;
 }
 
-.filter-input-radio:hover + label {
+.filter-input-radio:hover + label::before {
   opacity: 1.0;
 }
 
@@ -521,7 +528,7 @@ h1 {
   opacity: 0.1;
 }
 
-.example-image:hover {
+.example-image:hover .example-image-header{
   opacity: 1;
 }
 
