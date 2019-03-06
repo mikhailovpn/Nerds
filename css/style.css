@@ -400,8 +400,17 @@ main {
 	border-bottom: 2px solid lightgrey;
 }
 
-.row-logo img {
+.row-logo a {
 	opacity: 0.2;
+}
+
+.row-logo a:hover,
+.row-logo a:focus {
+	opacity: 1;
+}
+
+.row-logo a:active {
+	opacity: 0.1;
 }
 
 .vertical-line {
@@ -481,18 +490,30 @@ footer {
 	position: relative;
 	display: block;
 	width: 78px;
-  height: 78px;
+	height: 78px;
 	border-radius: 50%;
 	background-color: #e1e1e1;
 }
 
+.social-button a:hover,
+.social-button a:focus {
+	background-color: #e74246;
+}
+
+.social-button a:active {
+	color: #000000;
+	
+	background-color: #d7373b;
+	box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+}
+
 .social-button img {
 	margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 .social h2 {
@@ -519,8 +540,8 @@ h1 {
 .main-catalog {
 	display: flex;
 	align-items: flex-start;
-  flex-direction: row;
-  justify-content: space-between;
+	flex-direction: row;
+	justify-content: space-between;
 	padding: 58px 140px;
 }
 
@@ -528,9 +549,19 @@ h1 {
   width: 260px;
 }
 
-.filter button {
+.filter-button {
   background-color: #eeeeee;
   color: #000000;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+	background-color: #dddddd;
+}
+
+.filter-button:active {
+	color: #aaaaaa;
+	box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 .filter-item legend {
@@ -652,7 +683,6 @@ h1 {
   user-select: none;
 }
 
-
 .filter-input {
   display: none;
 }
@@ -694,8 +724,33 @@ h1 {
   left: -37px;
 }
 
+.sort-items {
+	font-weight:bold;
+	text-align: left;
+}
+
 .examples {
   margin-left: 140px;
+}
+
+.examples-form {
+	display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+	
+	margin-bottom: 50px;
+}
+
+.examples-form a {
+	color: #000000;
+	font-size: 18px;
+}
+
+.examples-form-right a {
+	font-size: 14px;
+	margin-left: 25px;
 }
 
 .examples-images {
@@ -727,14 +782,11 @@ h1 {
   list-style: none;
 }
 
-.pagination-item  {
-  margin-right: 11px;
+.pagination-item a {
+	margin-right: 11px;
 
   background-color: #eeeeee;
   border-radius: 3px;
-}
-
-.pagination-item a {
   box-sizing: border-box;
   display: block;
   width: 50px;
@@ -743,15 +795,27 @@ h1 {
   padding: 14px 20px;
 }
 
+.pagination-item a:hover,
+.pagination-item a:focus {
+	background-color: #dddddd;
+}
+
+.pagination-item a:active {
+	color: #aaaaaa;
+}
+
 .pagination-item-next a {
   width: 260px;
   margin: auto;
   text-align: center;
 }
 
-.pagination-item-current {
+.pagination-item-current a {
   background-color: #ffffff;
+}
 
+.pagination-item-current a:hover {
+  background-color: #ffffff;
 }
 
 .pagination-item-current a {
